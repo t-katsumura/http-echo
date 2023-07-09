@@ -5,7 +5,7 @@ defaultPlatforms:
 builds:
   - id: http-echo
     dir: .
-    main: ./
+    main:
     flags:
       - -tags
       - netgo
