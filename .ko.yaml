@@ -2,16 +2,13 @@ builds:
 - id: http-echo
   dir: .
   main: .
-  env:
-    - GOCACHE=/workspace/.gocache
   flags:
     - -tags
     - netgo
   ldflags:
     - -s -w
     - -extldflags "-static"
-    - -X main.version={{.Env.VERSION}}
   defaultBaseImage: scratch
-  defaultPlatforms:
-    - linux/arm64
+  platforms:
     - linux/amd64
+    - linux/arm64
