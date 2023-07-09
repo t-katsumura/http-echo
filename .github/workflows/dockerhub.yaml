@@ -23,5 +23,5 @@ jobs:
         DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
       run: |
-        echo "${DOCKERHUB_TOKEN}" | ko login https://index.docker.io --username "${DOCKERHUB_USERNAME}" --password-stdin
+        echo "${DOCKERHUB_TOKEN}" | ko login index.docker.io --username "${DOCKERHUB_USERNAME}" --password-stdin
         ko build ./ -B --tags v0.0.0
