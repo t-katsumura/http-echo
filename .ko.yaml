@@ -1,6 +1,5 @@
 builds:
 - id: http-echo
-  dir: .
   flags:
     - -tags
     - netgo
