@@ -1,11 +1,14 @@
 builds:
 - id: http-echo
+  dir: .
   flags:
     - -tags
     - netgo
   ldflags:
     - -s -w
     - -extldflags "-static"
+  env:
+    - CGO_ENABLED=0
   # defaultBaseImage: scratch
   platforms:
     - linux/amd64
