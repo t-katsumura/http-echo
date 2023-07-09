@@ -1,14 +1,14 @@
+defaultPlatforms:
+  - linux/amd64
+  - linux/arm64
+
 builds:
-- id: http-echo
-  flags:
-    - -tags
-    - netgo
-  ldflags:
-    - -s -w
-    - -extldflags "-static"
-  env:
-    - CGO_ENABLED=0
-  # defaultBaseImage: scratch
-  platforms:
-    - linux/amd64
-    - linux/arm64
+  - id: http-echo
+    flags:
+      - -tags
+      - netgo
+    ldflags:
+      - -s -w
+      - -extldflags "-static"
+    env:
+      - CGO_ENABLED=0
