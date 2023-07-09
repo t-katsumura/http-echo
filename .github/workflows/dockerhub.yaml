@@ -18,6 +18,7 @@ jobs:
     - name: Set up ko
       uses: ko-build/setup-ko@v0.6
       env:
-        KO_DOCKER_REPO: index.docker.io/tomopiro
+        KO_DOCKER_REPO: index.docker.io/${DOCKERHUB_USERNAME}
     - run: |
+        echo "${DOCKERHUB_TOKEN}" | ko login https://index.docker.io --username "${DOCKERHUB_USERNAME}" --password-stdin
         ko build ./ -B --tags v0.0.0
