@@ -18,7 +18,7 @@ jobs:
     - name: Set up ko
       uses: ko-build/setup-ko@v0.6
       with:
-          version: v1.14.1
+          version: v0.14.1
       env:
         KO_DOCKER_REPO: index.docker.io/${{ secrets.DOCKERHUB_USERNAME }}
     - env:
